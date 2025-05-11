@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="es">
+    {% include 'Sites/head.html' %}
+    <body>
+        {% include 'Sites/header.html' %}
+        <div id="slaps">
+            {% include 'Sites/offcanvas.html' %}
+            <section id="filter-slap" class="offcanvas offcanvas-start" data-bs-scroll="true" tabindex="-1" aria-labelledby="Filtros">
+                <div class="offcanvas-header">
+                    <h2 id="filter-slap-title" class="offcanvas-title me-auto">Filtros</h2>
+                    <button type="button" class="exit btn border-0" data-bs-dismiss="offcanvas" aria-label="Cerrar"></button>
+                </div>
+                <div class="offcanvas-body">
+                </div>
+            </section>
+        </div>
+        <main id="container">
+            <section id="store" class="px-3 py-2">
+                <div id="store-options" class="pb-2">
+                    <button type="button" id="filter-button" class="btn ms-2 border-0" data-bs-toggle="offcanvas" data-bs-target="#filter-slap" aria-controls="Busqueda"></button>
+                </div>
+                <div id="products" class="mb-3"></div>
+                <div id="pagination" class="d-flex justify-content-center gap-3"></div>
+            </section>
+        </main>
+        {% include 'Sites/footer.html' %}
+        <script src="./static/js/script_store.js"></script>
+    </body>
+</html>
